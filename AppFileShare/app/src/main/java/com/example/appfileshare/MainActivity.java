@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.OpenableColumns;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements NativeLink.Listen
     private TextView transferText;
     private TextView speedText;
     private TextView logText;
+    private ScrollView logScroll;
     private ProgressBar progressBar;
     private Button sendButton;
     private BlePeripheral peripheral;
@@ -92,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements NativeLink.Listen
         transferText = findViewById(R.id.transferText);
         speedText = findViewById(R.id.speedText);
         logText = findViewById(R.id.logText);
+        logScroll = findViewById(R.id.logScroll);
         progressBar = findViewById(R.id.progressBar);
         sendButton = findViewById(R.id.sendButton);
         sendButton.setEnabled(false);
@@ -265,6 +269,7 @@ public class MainActivity extends AppCompatActivity implements NativeLink.Listen
         if (logBuilder.length() > 6000) logBuilder.delete(0, 2000);
         logBuilder.append(line).append('\n');
         logText.setText(logBuilder.toString());
+        logScroll.post(() -> logScroll.fullScroll(View.FOCUS_DOWN));
     }
 
     private void post(Runnable action) {
