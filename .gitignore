@@ -1,0 +1,66 @@
+# 操作系统
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Visual Studio / MSBuild
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.cachefile
+
+# Qt / C++ 编译输出
+x64/
+Win32/
+[Dd]ebug/
+[Rr]elease/
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.idb
+*.ilk
+*.exp
+*.tlog
+*.log
+*.recipe
+*.lastbuildstate
+
+# C++/WinRT 预生成头，由 debug_build.bat 重新生成
+WinFileShare/WinFileShare/generated/
+
+# Android / Gradle / NDK
+.gradle/
+.cxx/
+.externalNativeBuild/
+local.properties
+captures/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.hprof
+
+# Android Studio 本机状态
+*.iml
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+.idea/shelf/
+
+# 各模块的构建目录
+AppFileShare/build/
+AppFileShare/app/build/
